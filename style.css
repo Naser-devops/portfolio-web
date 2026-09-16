@@ -1,0 +1,710 @@
+/* =========================
+   FONTS
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #0B1220;
+    --card-color: #141C2F;
+    --card-color-alt: #1B2540;
+
+    --primary-color: #38BDF8;
+    --accent-color: #FBBF24;
+
+    --text-color: #F1F5F9;
+    --text-secondary: #94A3B8;
+
+    --border-color: #253147;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+
+    padding: 20px 40px;
+
+    letter-spacing: 1px;
+    font-weight: bold;
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header .logo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px;
+}
+
+header .logo img {
+    height: 38px;
+    width: 38px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.25s ease;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero .cont {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: auto;
+    padding: 0 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-cont {
+    width: 50%;
+}
+
+.hero-cont h1 {
+    font-size: 52px;
+    line-height: 1.15;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.hero-cont h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.hero-cont p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: var(--text-secondary);
+    font-family: 'Inter', sans-serif;
+    max-width: 480px;
+}
+
+
+/* HERO BUTTON */
+
+.hero-cont a {
+    display: inline-block;
+
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'JetBrains Mono', monospace;
+
+    background-color: var(--primary-color);
+    color: #0B1220;
+
+    font-weight: 700;
+
+    border-radius: 8px;
+
+    padding: 14px 28px;
+
+    transition: 0.3s ease;
+}
+
+.hero-cont a:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.35);
+}
+
+
+/* HERO IMAGE */
+
+.hero-img {
+    width: 50%;
+    height: 500px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.hero-img img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills {
+    padding: 100px 40px;
+}
+
+
+/* SECTION TITLE */
+
+.title {
+    text-align: center;
+
+    font-size: 34px;
+
+    margin-bottom: 50px;
+
+    color: var(--text-color);
+}
+
+
+/* SKILLS CONTAINER */
+
+.cont-sk {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* SKILL CARD */
+
+.skills-card {
+    width: 280px;
+
+    padding: 30px;
+
+    border-radius: 12px;
+    text-align: center;
+
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-top: 3px solid var(--primary-color);
+
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.skills-card:hover {
+    transform: translateY(-8px);
+    border-top-color: var(--accent-color);
+}
+
+
+/* SKILL CARD TITLE */
+
+.skills-card h3 {
+    font-size: 20px;
+
+    margin-bottom: 15px;
+
+    font-weight: 600;
+
+    color: var(--text-color);
+}
+
+
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    padding: 100px 40px;
+
+    background-color: var(--card-color-alt);
+}
+
+
+.about-container {
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+
+.about-content {
+    background-color: var(--card-color);
+
+    border: 1px solid var(--border-color);
+
+    border-left: 4px solid var(--primary-color);
+
+    border-radius: 14px;
+
+    padding: 40px;
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.about-content:hover {
+    transform: translateY(-5px);
+
+    border-left-color: var(--accent-color);
+
+    box-shadow:
+        0 20px 35px rgba(0, 0, 0, 0.30);
+}
+
+
+.about-content .title {
+    margin-bottom: 35px;
+}
+
+
+.about-content p {
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    color: var(--text-secondary);
+
+    margin-bottom: 18px;
+
+    font-family: 'Inter', sans-serif;
+}
+
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+.about-goal {
+    color: var(--text-color) !important;
+
+    font-family: 'JetBrains Mono', monospace !important;
+
+    font-weight: 600;
+
+    border-top: 1px solid var(--border-color);
+
+    padding-top: 20px;
+
+    margin-top: 25px;
+}
+
+/* SKILL CARD DESCRIPTION */
+
+.skills-card p {
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    color: var(--text-secondary);
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects {
+    padding: 100px 40px;
+}
+
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    width: 350px;
+
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+}
+
+.project-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    background-color: var(--card-color-alt);
+}
+
+
+.project-info {
+    padding: 25px;
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.project-info h3 {
+    font-size: 19px;
+    margin-bottom: 12px;
+    color: var(--text-color);
+    line-height: 1.3;
+}
+
+
+.project-info p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: var(--text-secondary);
+}
+
+.project-info p:nth-of-type(2) {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--primary-color);
+    background-color: var(--card-color-alt);
+    padding: 8px 10px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.project-info a {
+    align-self: center;
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: #0B1220;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    margin-top: auto;
+    transition: 0.3s ease;
+}
+
+.project-info a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(56, 189, 248, 0.3);
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    padding: 100px 40px;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-form label {
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-secondary);
+    text-transform: lowercase;
+}
+
+.contact-form input,
+.contact-form textarea {
+
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    background-color: var(--card-color);
+    color: var(--text-color);
+    transition: 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--text-secondary);
+    opacity: 0.6;
+}
+
+.contact-form textarea {
+    min-height: 180px;
+    resize: vertical;
+    width: 100%;
+}
+
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+
+
+.contact-form button {
+    align-self: center;
+
+    margin-top: 10px;
+
+    padding: 14px 30px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: var(--primary-color);
+    color: #0B1220;
+
+    font-size: 15px;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+
+    cursor: pointer;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+    .hero .cont {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 100px 20px 40px;
+    }
+
+    .hero-cont,
+    .hero-img {
+        width: 100%;
+    }
+
+    .hero-cont p {
+        max-width: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-img {
+        height: 320px;
+        margin-bottom: 30px;
+    }
+
+    nav {
+        gap: 16px;
+    }
+
+    header {
+        padding: 16px 20px;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: var(--card-color);
+    border-top: 1px solid var(--border-color);
+    padding: 60px 40px 0;
+}
+
+.footer-cont {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    padding-bottom: 40px;
+}
+
+.footer-brand a {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.footer-brand p {
+    margin-top: 12px;
+    max-width: 280px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.footer-links,
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links h4,
+.footer-social h4 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: var(--text-color);
+    margin-bottom: 4px;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.25s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.social-icons {
+    display: flex;
+    gap: 14px;
+}
+
+.social-icons a {
+    color: var(--text-secondary);
+    display: flex;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border-color);
+    padding: 20px 0;
+
+    text-align: center;
+
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 600px) {
+    .footer-cont {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-brand p {
+        max-width: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
